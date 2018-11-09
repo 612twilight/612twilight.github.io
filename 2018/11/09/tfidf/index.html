@@ -15,17 +15,18 @@
 
 
 
-<meta name="description" content="&amp;lt;!DOCTYPE html&amp;gt; ]\404">
-<meta property="og:type" content="website">
-<meta property="og:title" content="404 Not Found：该页无法显示">
-<meta property="og:url" content="https://612yese.github.io/404.html">
+<meta name="description" content="摘要：这是一篇介绍如何使用genism去计算一个词在文档语料库的tfidf值的博客">
+<meta name="keywords" content="gensim,tfidf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="genism之tfidf">
+<meta property="og:url" content="https://612yese.github.io/2018/11/09/tfidf/index.html">
 <meta property="og:site_name" content="twilight的窝">
-<meta property="og:description" content="&amp;lt;!DOCTYPE html&amp;gt; ]\404">
+<meta property="og:description" content="摘要：这是一篇介绍如何使用genism去计算一个词在文档语料库的tfidf值的博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T14:26:17.371Z">
+<meta property="og:updated_time" content="2018-11-09T12:15:22.499Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="404 Not Found：该页无法显示">
-<meta name="twitter:description" content="&amp;lt;!DOCTYPE html&amp;gt; ]\404">
+<meta name="twitter:title" content="genism之tfidf">
+<meta name="twitter:description" content="摘要：这是一篇介绍如何使用genism去计算一个词在文档语料库的tfidf值的博客">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -57,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>404 Not Found：该页无法显示 | twilight的窝</title>
+<title>genism之tfidf | twilight的窝</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,7 +68,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -268,11 +269,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-tfidf" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/404.html" class="article-date">
-      <time datetime="2018-11-07T14:26:17.418Z" itemprop="datePublished">2018-11-07</time>
+      <a href="/2018/11/09/tfidf/" class="article-date">
+      <time datetime="2018-11-09T08:10:27.000Z" itemprop="datePublished">2018-11-09</time>
 </a>
 
 
@@ -280,14 +281,14 @@
   
   <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
+      <input type="hidden" class="isFancy">
     
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      404 Not Found：该页无法显示
+      genism之tfidf
     </h1>
   
 
@@ -295,8 +296,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/NLP/">NLP</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gensim/">gensim</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tfidf/">tfidf</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -304,38 +313,87 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
+        <p><excerpt in="" index="" |="" 首页摘要="">摘要：这是一篇介绍如何使用genism去计算一个词在文档语料库的tfidf值的博客<a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 余下全文="">
 
-
-          
-        <p>&lt;!DOCTYPE html&gt;</p>
-<html lang="en"><br><head><meta name="generator" content="Hexo 3.8.0">]\<br><meta charset="UTF-8"><br><title>404</title><br></head><br><body><br><script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" charset="utf-8"></script><br></body><br></html>
-
+<h1 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from gensim import models, similarities</span><br></pre></td></tr></table></figure>
+<h1 id="定义语料库"><a href="#定义语料库" class="headerlink" title="定义语料库"></a>定义语料库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">corpus = [[(0, 1.0), (1, 1.0), (2, 1.0)],</span><br><span class="line">            [(2, 1.0), (3, 1.0), (4, 1.0), (5, 1.0), (6, 1.0), (8, 1.0)],</span><br><span class="line">            [(1, 1.0), (3, 1.0), (4, 1.0), (7, 1.0)],</span><br><span class="line">            [(0, 1.0), (4, 2.0), (7, 1.0)],</span><br><span class="line">            [(3, 1.0), (5, 1.0), (6, 1.0)],</span><br><span class="line">            [(9, 1.0)],</span><br><span class="line">            [(9, 1.0), (10, 1.0)],</span><br><span class="line">            [(9, 1.0), (10, 1.0), (11, 1.0)],</span><br><span class="line">            [(8, 1.0), (10, 1.0), (11, 1.0)]]</span><br></pre></td></tr></table></figure>
+<p>corpus就是我们的文档库，其中article0=corpus[0]=[(0, 1.0), (1, 1.0), (2, 1.0)]表示的是一篇文档的组成,article0[0]=（0,1.0）表示的是单词编号为0的词在该文章里有出现过1.0次，其余组成也是这样：单词编号为1的词在该文章里出现1.0次，单词编号为2的词在该文章里出现了1.0次。</p>
+<h1 id="建立tfidf的模型"><a href="#建立tfidf的模型" class="headerlink" title="建立tfidf的模型"></a>建立tfidf的模型</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tfidf = models.TfidfModel(corpus)</span><br></pre></td></tr></table></figure>
+<h1 id="建立需要提取的文档"><a href="#建立需要提取的文档" class="headerlink" title="建立需要提取的文档"></a>建立需要提取的文档</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new_article = [(0, 1), (4, 1)]</span><br></pre></td></tr></table></figure>
+<p>显然文档也是由向量组成的。</p>
+<h1 id="计算新文档的tfidf的值"><a href="#计算新文档的tfidf的值" class="headerlink" title="计算新文档的tfidf的值"></a>计算新文档的tfidf的值</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result=tfidf[new_article]</span><br></pre></td></tr></table></figure>
+<p>result就是这篇文章中所有词的tfidf值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<p>打印结果是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[(0, 0.8075244024440723), (4, 0.5898341626740045)]</span><br></pre></td></tr></table></figure>
+<p>结果表示的是编号为0的词的tfidf的值为0.8075244024440723，而编号为4的词的tfidf的值为0.5898341626740045</p>
+<h1 id="综合上述代码"><a href="#综合上述代码" class="headerlink" title="综合上述代码"></a>综合上述代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">from gensim import models, similarities</span><br><span class="line">corpus = [[(0, 1.0), (1, 1.0), (2, 1.0)],</span><br><span class="line">            [(2, 1.0), (3, 1.0), (4, 1.0), (5, 1.0), (6, 1.0), (8, 1.0)],</span><br><span class="line">            [(1, 1.0), (3, 1.0), (4, 1.0), (7, 1.0)],</span><br><span class="line">            [(0, 1.0), (4, 2.0), (7, 1.0)],</span><br><span class="line">            [(3, 1.0), (5, 1.0), (6, 1.0)],</span><br><span class="line">            [(9, 1.0)],</span><br><span class="line">            [(9, 1.0), (10, 1.0)],</span><br><span class="line">            [(9, 1.0), (10, 1.0), (11, 1.0)],</span><br><span class="line">            [(8, 1.0), (10, 1.0), (11, 1.0)]]</span><br><span class="line">print(np.shape(corpus))</span><br><span class="line">tfidf = models.TfidfModel(corpus)</span><br><span class="line">new_article = [(0, 1), (4, 1)]</span><br><span class="line">result = tfidf[new_article]</span><br><span class="line">print(result) </span><br><span class="line"># [(0, 0.8075244024440723), (4, 0.5898341626740045)]</span><br></pre></td></tr></table></figure></the>
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/11/09/tfidf/">genism之tfidf</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Twilight</a></p>
+        <p><span>发布时间:</span>2018-11-09, 16:10:27</p>
+        <p><span>最后更新:</span>2018-11-09, 20:15:22</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/09/tfidf/" title="genism之tfidf">https://612yese.github.io/2018/11/09/tfidf/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://612yese.github.io/2018/11/09/tfidf/　　作者: Twilight" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/11/09/分词/">
+                    jieba之分词
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/11/09/word2vec/">
+                    word2vec工具探索
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#导入"><span class="toc-number">1.</span> <span class="toc-text">导入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#定义语料库"><span class="toc-number">2.</span> <span class="toc-text">定义语料库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立tfidf的模型"><span class="toc-number">3.</span> <span class="toc-text">建立tfidf的模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立需要提取的文档"><span class="toc-number">4.</span> <span class="toc-text">建立需要提取的文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算新文档的tfidf的值"><span class="toc-number">5.</span> <span class="toc-text">计算新文档的tfidf的值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#综合上述代码"><span class="toc-number">6.</span> <span class="toc-text">综合上述代码</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
 
@@ -353,7 +411,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"404 Not Found：该页无法显示　| twilight的窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"genism之tfidf　| twilight的窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -366,6 +424,50 @@
 
 
 
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'https://612yese.github.io/2018/11/09/tfidf/';
+            this.page.identifier = '2018/11/09/tfidf/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//twilight-2.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/11/09/分词/" title="上一篇: jieba之分词">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/11/09/word2vec/" title="下一篇: word2vec工具探索">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/分词/">jieba之分词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/tfidf/">genism之tfidf</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/word2vec/">word2vec工具探索</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/07/建立这个站点/">如何建立这个站点</a></li></ul>
 
 
 

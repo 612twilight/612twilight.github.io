@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://612yese.github.io/"/>
-  <updated>2018-11-09T07:36:47.265Z</updated>
+  <updated>2018-11-09T13:05:35.540Z</updated>
   <id>https://612yese.github.io/</id>
   
   <author>
@@ -17,11 +17,77 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>jieba之分词</title>
+    <link href="https://612yese.github.io/2018/11/09/%E5%88%86%E8%AF%8D/"/>
+    <id>https://612yese.github.io/2018/11/09/分词/</id>
+    <published>2018-11-09T08:42:01.000Z</published>
+    <updated>2018-11-09T13:05:35.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;摘要：这是一篇介绍如何使用jieba去分词的博客&lt;/excerpt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="NLP" scheme="https://612yese.github.io/categories/NLP/"/>
+    
+    
+      <category term="分词" scheme="https://612yese.github.io/tags/%E5%88%86%E8%AF%8D/"/>
+    
+      <category term="jieba" scheme="https://612yese.github.io/tags/jieba/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>genism之tfidf</title>
+    <link href="https://612yese.github.io/2018/11/09/tfidf/"/>
+    <id>https://612yese.github.io/2018/11/09/tfidf/</id>
+    <published>2018-11-09T08:10:27.000Z</published>
+    <updated>2018-11-09T12:15:22.499Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;摘要：这是一篇介绍如何使用genism去计算一个词在文档语料库的tfidf值的博客&lt;/excerpt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="NLP" scheme="https://612yese.github.io/categories/NLP/"/>
+    
+    
+      <category term="gensim" scheme="https://612yese.github.io/tags/gensim/"/>
+    
+      <category term="tfidf" scheme="https://612yese.github.io/tags/tfidf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>word2vec工具探索</title>
+    <link href="https://612yese.github.io/2018/11/09/word2vec/"/>
+    <id>https://612yese.github.io/2018/11/09/word2vec/</id>
+    <published>2018-11-09T08:01:34.000Z</published>
+    <updated>2018-11-09T08:11:30.700Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;摘要：这是一篇介绍如何使用genism去计算一个词的word embedding&lt;/excerpt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="NLP" scheme="https://612yese.github.io/categories/NLP/"/>
+    
+    
+      <category term="gensim" scheme="https://612yese.github.io/tags/gensim/"/>
+    
+      <category term="word2vec" scheme="https://612yese.github.io/tags/word2vec/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何建立这个站点</title>
     <link href="https://612yese.github.io/2018/11/07/%E5%BB%BA%E7%AB%8B%E8%BF%99%E4%B8%AA%E7%AB%99%E7%82%B9/"/>
     <id>https://612yese.github.io/2018/11/07/建立这个站点/</id>
     <published>2018-11-07T14:36:46.618Z</published>
-    <updated>2018-11-09T07:36:47.265Z</updated>
+    <updated>2018-11-09T08:04:30.943Z</updated>
     
     <summary type="html">
     
@@ -29,10 +95,10 @@
     
     </summary>
     
-      <category term="新的工具使用记录" scheme="https://612yese.github.io/categories/%E6%96%B0%E7%9A%84%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"/>
+      <category term="tools" scheme="https://612yese.github.io/categories/tools/"/>
     
     
-      <category term="博客本身" scheme="https://612yese.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%9C%AC%E8%BA%AB/"/>
+      <category term="hexo" scheme="https://612yese.github.io/tags/hexo/"/>
     
   </entry>
   
