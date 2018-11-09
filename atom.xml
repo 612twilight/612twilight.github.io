@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Twilight的窝</title>
+  <title>twilight的窝</title>
   <icon>https://www.gravatar.com/avatar/b9a09995bdb22a08393df3008f4387c0</icon>
   <subtitle>积沙成塔，水滴石穿</subtitle>
   <link href="/atom.xml" rel="self"/>
