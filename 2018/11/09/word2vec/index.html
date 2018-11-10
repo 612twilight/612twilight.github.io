@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="twilight的窝">
 <meta property="og:description" content="摘要：这是一篇介绍如何使用genism去计算一个词的word embedding">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-09T08:11:30.700Z">
+<meta property="og:updated_time" content="2018-11-10T13:45:31.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="word2vec工具探索">
 <meta name="twitter:description" content="摘要：这是一篇介绍如何使用genism去计算一个词的word embedding">
@@ -192,7 +192,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/gensim/">gensim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jieba/">jieba</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tfidf/">tfidf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word2vec/">word2vec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分词/">分词</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/data-streaming/">data streaming</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gensim/">gensim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jieba/">jieba</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tfidf/">tfidf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word2vec/">word2vec</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分词/">分词</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生日快乐/">生日快乐</a></li></ul>
                     </div>
                 </section>
                 
@@ -316,6 +316,42 @@
         <p><excerpt in="" index="" |="" 首页摘要="">摘要：这是一篇介绍如何使用genism去计算一个词的word embedding<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
+<h1 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h1><p>这是最简单的使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import gensim</span><br><span class="line"></span><br><span class="line">sentences = [[&apos;first&apos;, &apos;sentence&apos;], [&apos;second&apos;, &apos;sentence&apos;]]</span><br><span class="line"># train word2vec on the two sentences</span><br><span class="line">model = gensim.models.Word2Vec(sentences, size=5, min_count=1)</span><br><span class="line">word_vec = model[&apos;first&apos;]</span><br><span class="line">print(word_vec)</span><br><span class="line"># [ 0.03712391 -0.01817003 -0.06288775 -0.04320185 -0.05464336]</span><br></pre></td></tr></table></figure>
+<h1 id="模型参数介绍"><a href="#模型参数介绍" class="headerlink" title="模型参数介绍"></a>模型参数介绍</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class gensim.models.word2vec.Word2Vec(sentences=None, corpus_file=None, size=100, alpha=0.025, window=5, min_count=5, max_vocab_size=None, sample=0.001, seed=1, workers=3, min_alpha=0.0001, sg=0, hs=0, negative=5, ns_exponent=0.75, cbow_mean=1, hashfxn=&lt;built-in function hash&gt;, iter=5, null_word=0, trim_rule=None, sorted_vocab=1, batch_words=10000, compute_loss=False, callbacks=(), max_final_vocab=None)</span><br></pre></td></tr></table></figure>
+<p>sentence：用于训练的数据，The sentences iterable can be simply a list of lists of tokens ，意思是它是list of lists，最里层的list就是句子，sentences = [[‘first’, ‘sentence’], [‘second’, ‘sentence’]]就是表示第一个句子是first sentence，第二个句子是second sentence。但是他也可以表示为<em>iterable of iterables</em> ,iterable的一些介绍可以看我的另一篇博文，简单来说就是可以多次生成iterator的对象。</p>
+<p>corpus_file: 这是一个用来加速的选项，需要用genism里面的一个处理函数，没见人用过</p>
+<p>size：(<em>int,</em> <em>optional</em>)  - 是指特征向量的维度，默认为100 </p>
+<p>window：(<em>int,</em> <em>optional</em>) —表示当前词与预测词在一个句子中的最大距离是多少 </p>
+<p>alpha: (<em>float,</em> <em>optional</em>) - 是学习速率 </p>
+<p>min_alpha：<em>(</em>float<em>,</em> <em>optional</em>) – 学习率会线性的下降到min_alpha的值</p>
+<p>seed：(<em>int,</em> <em>optional</em>)  - 用于随机数发生器。与初始化词向量有关。 </p>
+<p>sg： (<em>{0</em>, <em>1},</em> <em>optional</em>) –  1 表示使用skip-gram; 其他表示使用CBOW.</p>
+<p>hs：(<em>{0,</em> <em>1},</em> <em>optional</em>) – 如果是1, 表示使用hierarchical softmax去训练. 如果是0, 并且negative参数非零,会使用负采样训练。</p>
+<p>negative： (<em>int,</em> <em>optional</em>) – 这里说的是负采样会加入几个噪声进去，表示负的程度，一般取5到20个词作为负采样，如果设置成0，那么就不会有负样本</p>
+<p>cbow_mean:  (<em>{0,</em> <em>1},</em> <em>optional</em>) - 如果为0，则采用上下文词向量的和，如果为1（defau·t）则采用均值。只有使用CBOW的时候才起作用。</p>
+<p>min_count :  (<em>int,</em> <em>optional</em>) - 词频少于min_count次数的单词会被丢弃掉, 默认值为5</p>
+<p>max_vocab_size: (<em>int,</em> <em>optional</em>) - 设置词向量构建期间的RAM限制。如果所有独立单词个数超过这个，则就消除掉其中最不频繁的一个。每一千万个单词需要大约1GB的RAM。设置成None则没有限制。</p>
+<p>sample:  (<em>float,</em> <em>optional</em>) - 高频词汇的随机降采样的配置阈值，默认为1e-3，范围是(0,1e-5)</p>
+<p>workers： (<em>int,</em> <em>optional</em>)  - 参数控制训练的并行数。</p>
+<p>hashfxn： hash函数来初始化权重。默认使用python的hash函数</p>
+<p>iter：(<em>int,</em> <em>optional</em>)  - 迭代次数，默认为5，一般会有默认的第一次，用来构建字典树</p>
+<p>trim_rule： (<em>function,</em> <em>optional</em>)  用于设置词汇表的整理规则，指定那些单词要留下，哪些要被删除。可以设置为None（min_count会被使用）或者一个接受()并返回RU·E_DISCARD,uti·s.RU·E_KEEP或者uti·s.RU·E_DEFAU·T的函数。</p>
+<p>sorted_vocab： (<em>{0,</em> <em>1},</em> <em>optional</em>) – 如果为1（default），则在分配word index 的时候会先对单词基于频率降序排序。</p>
+<p>batch_words：(<em>int,</em> <em>optional</em>) - 每一批的传递给线程的单词的数量，默认为10000</p>
+<h1 id="使用iterable传入对象"><a href="#使用iterable传入对象" class="headerlink" title="使用iterable传入对象"></a>使用iterable传入对象</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class MySentences(object):</span><br><span class="line">    def __init__(self, dirname):</span><br><span class="line">        self.dirname = dirname</span><br><span class="line"> </span><br><span class="line">    def __iter__(self):</span><br><span class="line">        for fname in os.listdir(self.dirname):</span><br><span class="line">            for line in open(os.path.join(self.dirname, fname)):</span><br><span class="line">                yield line.split()</span><br><span class="line"> </span><br><span class="line">sentences = MySentences(&apos;/some/directory&apos;) # a memory-friendly iterator</span><br><span class="line">model = gensim.models.Word2Vec(sentences)</span><br></pre></td></tr></table></figure>
+<p>这里的sentence是一个可迭代对象，每次给模型的是一个list（文件夹里面文件的某一行的单词list），然后逐步把所有语料库都传入进去，这样可以不用一次加载全部语料库，节约了内存</p>
+<h1 id="输入流无法重复利用"><a href="#输入流无法重复利用" class="headerlink" title="输入流无法重复利用"></a>输入流无法重复利用</h1><p>有时候我们的输入流是无法重复使用的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">model = gensim.models.Word2Vec(iter=1)  </span><br><span class="line"># 建立一个空模型 an empty model, no training yet</span><br><span class="line">model.build_vocab(some_sentences) </span><br><span class="line"># 先建立字典树 不要使用训练的数据，用别的已知的数据</span><br><span class="line"># can be a non-repeatable, 1-pass generator</span><br><span class="line">model.train(other_sentences)  </span><br><span class="line"># 使用这次训练的语料库进行训练 </span><br><span class="line"># can be a non-repeatable, 1-pass generator</span><br></pre></td></tr></table></figure>
+<h1 id="存储模型"><a href="#存储模型" class="headerlink" title="存储模型"></a>存储模型</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">model.save(&apos;/tmp/mymodel&apos;)</span><br><span class="line">new_model = gensim.models.Word2Vec.load(&apos;/tmp/mymodel&apos;)</span><br></pre></td></tr></table></figure>
+<h1 id="载入模型并进一步训练"><a href="#载入模型并进一步训练" class="headerlink" title="载入模型并进一步训练"></a>载入模型并进一步训练</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">model = gensim.models.Word2Vec.load(&apos;/tmp/mymodel&apos;)</span><br><span class="line">more_sentence = [[&quot;some&quot;,&quot;more&quot;,&quot;sentences&quot;]]</span><br><span class="line">model.train(more_sentences)</span><br></pre></td></tr></table></figure>
+<h1 id="一些模型的用处"><a href="#一些模型的用处" class="headerlink" title="一些模型的用处"></a>一些模型的用处</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">model.most_similar(positive=[&apos;woman&apos;, &apos;king&apos;], negative=[&apos;man&apos;], topn=1)</span><br><span class="line">[(&apos;queen&apos;, 0.50882536)]</span><br><span class="line">model.doesnt_match(&quot;breakfast cereal dinner lunch&quot;.split())</span><br><span class="line">&apos;cereal&apos;</span><br><span class="line">model.similarity(&apos;woman&apos;, &apos;man&apos;)</span><br><span class="line">0.73723527</span><br></pre></td></tr></table></figure>
+<p>most_similar的用法：取最接近（positive向量和 - negative向量和）的前topn个词，并给出相似度</p>
+<p>positive (<em>list of str</em>, <em>optional</em>) – List of words that contribute positively.</p>
+<p>negative<em>(</em>list of str<em>,</em> <em>optional</em>) – List of words that contribute negatively.</p>
+<p>topn (<em>int,</em> <em>optional</em>) – Number of top-N similar words to return.</p>
+<p>similarity的用法：计算两个单词的余弦相似度</p>
+<p>doesnt_match的用法：找到list里面与其他词最不一相似的那一个</p>
 </the>
       
     </div>
@@ -327,7 +363,7 @@
         <p><span>本文标题:</span><a href="/2018/11/09/word2vec/">word2vec工具探索</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">twilight</a></p>
         <p><span>发布时间:</span>2018-11-09, 16:01:34</p>
-        <p><span>最后更新:</span>2018-11-09, 16:11:30</p>
+        <p><span>最后更新:</span>2018-11-10, 21:45:31</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/11/09/word2vec/" title="word2vec工具探索">https://612yese.github.io/2018/11/09/word2vec/</a>
             <span class="copy-path" data-clipboard-text="原文: https://612yese.github.io/2018/11/09/word2vec/　　作者: twilight" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -363,7 +399,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#初识"><span class="toc-number">1.</span> <span class="toc-text">初识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#模型参数介绍"><span class="toc-number">2.</span> <span class="toc-text">模型参数介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用iterable传入对象"><span class="toc-number">3.</span> <span class="toc-text">使用iterable传入对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#输入流无法重复利用"><span class="toc-number">4.</span> <span class="toc-text">输入流无法重复利用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#存储模型"><span class="toc-number">5.</span> <span class="toc-text">存储模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#载入模型并进一步训练"><span class="toc-number">6.</span> <span class="toc-text">载入模型并进一步训练</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一些模型的用处"><span class="toc-number">7.</span> <span class="toc-text">一些模型的用处</span></a></li></ol>
         
     </div>
     <style>
@@ -455,7 +491,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/分词/">jieba之分词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/tfidf/">genism之tfidf</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/word2vec/">word2vec工具探索</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/07/建立这个站点/">如何建立这个站点</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/11/10/吉他谱-祝你生日快乐/">吉他谱_祝你生日快乐</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/10/python里的Data-streaming总结/">python里的Data streaming总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/分词/">jieba之分词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/tfidf/">genism之tfidf</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/09/word2vec/">word2vec工具探索</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/07/建立这个站点/">如何建立这个站点</a></li></ul>
 
 
 
