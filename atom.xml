@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://612yese.github.io/"/>
-  <updated>2018-11-10T12:48:44.837Z</updated>
+  <updated>2018-11-20T11:31:54.155Z</updated>
   <id>https://612yese.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VPS与ssr搭建</title>
+    <link href="https://612yese.github.io/2018/11/20/VPS%E4%B8%8Essr%E6%90%AD%E5%BB%BA/"/>
+    <id>https://612yese.github.io/2018/11/20/VPS与ssr搭建/</id>
+    <published>2018-11-20T10:45:19.000Z</published>
+    <updated>2018-11-20T11:31:54.155Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;摘要：[转载]这是一篇介绍如何利用远程虚拟主机去搭建ssr获得访问外网的能力&lt;/excerpt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://612yese.github.io/categories/tools/"/>
+    
+    
+      <category term="vps" scheme="https://612yese.github.io/tags/vps/"/>
+    
+      <category term="ssr" scheme="https://612yese.github.io/tags/ssr/"/>
+    
+  </entry>
   
   <entry>
     <title>吉他谱_祝你生日快乐</title>
@@ -105,7 +127,7 @@
     <link href="https://612yese.github.io/2018/11/09/word2vec/"/>
     <id>https://612yese.github.io/2018/11/09/word2vec/</id>
     <published>2018-11-09T08:01:34.000Z</published>
-    <updated>2018-11-10T13:45:31.098Z</updated>
+    <updated>2018-11-10T13:46:04.883Z</updated>
     
     <summary type="html">
     
