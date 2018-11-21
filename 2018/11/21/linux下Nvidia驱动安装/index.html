@@ -26,7 +26,7 @@
 <meta property="og:image" content="https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/驱动选择1.png">
 <meta property="og:image" content="https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/驱动选择2.png">
 <meta property="og:image" content="https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/驱动安装后3.png">
-<meta property="og:updated_time" content="2018-11-21T16:28:00.524Z">
+<meta property="og:updated_time" content="2018-11-21T16:31:10.800Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux下Nvidia驱动安装">
 <meta name="twitter:description" content="摘要：这是一篇介绍如何在linux下安装Nvidia驱动的文章">
@@ -339,7 +339,7 @@
 <p>然后关闭图形界面</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service lightdm stop</span><br><span class="line"></span><br><span class="line">sudo ./NVIDIA-Linux-x86_64-410.78.run -no-x-check -no-nouveau-check -no-opengl-files</span><br></pre></td></tr></table></figure>
 <p>这里的-no-opengl-files参数一定要带上，不然进入之后会反复登录，黑屏或者屏幕显示异常，如果出现上述情况，删掉驱动重装。</p>
-<h1 id="安装过程中的密钥选项"><a href="#安装过程中的密钥选项" class="headerlink" title="安装过程中的密钥选项"></a>安装过程中的密钥选项</h1><p>关于密钥的那个需要着重提示一下</p>
+<h1 id="安装过程中的密钥选项"><a href="#安装过程中的密钥选项" class="headerlink" title="安装过程中的密钥选项"></a>安装过程中的密钥选项</h1><p>关于密钥的那个需要着重提示一下 参考链接：<a href="https://www.cnblogs.com/marky/p/8243607.html" target="_blank" rel="noopener">驱动安装</a></p>
 <p>安装提示 “sign  the kernel module”  </p>
 <p>安装过程中提示是否sign the kernel module（为内核模块签名），这里要选择是。接下来会继续问使用已有的密钥给模块签名还是重新生成。</p>
 <p>这里选在重新生成密钥。继续下去之后，密钥会在/usr/share/nvidia/下生成一个nvidia*.der（公钥）文件和nvidia*.key（私钥）文件，当提示是否删除已生成的密钥文件时，选择否，</p>
@@ -364,7 +364,7 @@
         <p><span>本文标题:</span><a href="/2018/11/21/linux下Nvidia驱动安装/">linux下Nvidia驱动安装</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">twilight</a></p>
         <p><span>发布时间:</span>2018-11-21, 16:04:37</p>
-        <p><span>最后更新:</span>2018-11-22, 00:28:00</p>
+        <p><span>最后更新:</span>2018-11-22, 00:31:10</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/11/21/linux下Nvidia驱动安装/" title="linux下Nvidia驱动安装">https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/</a>
             <span class="copy-path" data-clipboard-text="原文: https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/　　作者: twilight" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
