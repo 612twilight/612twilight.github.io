@@ -15,18 +15,22 @@
 
 
 
-<meta name="description" content="摘要：这是一篇介绍如何使用python里面的dom去解析xml">
-<meta name="keywords" content="xml解析">
+<meta name="description" content="摘要：这是一篇介绍如何在linux下安装Nvidia驱动的文章">
+<meta name="keywords" content="linux,nvidia">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python的xml解析">
-<meta property="og:url" content="https://612yese.github.io/2018/11/20/python的xml解析/index.html">
+<meta property="og:title" content="linux下Nvidia驱动安装">
+<meta property="og:url" content="https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/index.html">
 <meta property="og:site_name" content="twilight的窝">
-<meta property="og:description" content="摘要：这是一篇介绍如何使用python里面的dom去解析xml">
+<meta property="og:description" content="摘要：这是一篇介绍如何在linux下安装Nvidia驱动的文章">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-21T02:37:45.359Z">
+<meta property="og:image" content="https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/驱动选择1.png">
+<meta property="og:image" content="https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/驱动选择2.png">
+<meta property="og:image" content="https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/驱动安装后3.png">
+<meta property="og:updated_time" content="2018-11-21T16:28:00.524Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python的xml解析">
-<meta name="twitter:description" content="摘要：这是一篇介绍如何使用python里面的dom去解析xml">
+<meta name="twitter:title" content="linux下Nvidia驱动安装">
+<meta name="twitter:description" content="摘要：这是一篇介绍如何在linux下安装Nvidia驱动的文章">
+<meta name="twitter:image" content="https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/驱动选择1.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +62,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>python的xml解析 | twilight的窝</title>
+<title>linux下Nvidia驱动安装 | twilight的窝</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -269,11 +273,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-python的xml解析" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-linux下Nvidia驱动安装" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/11/20/python的xml解析/" class="article-date">
-      <time datetime="2018-11-20T13:30:32.000Z" itemprop="datePublished">2018-11-20</time>
+      <a href="/2018/11/21/linux下Nvidia驱动安装/" class="article-date">
+      <time datetime="2018-11-21T08:04:37.000Z" itemprop="datePublished">2018-11-21</time>
 </a>
 
 
@@ -288,7 +292,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      python的xml解析
+      linux下Nvidia驱动安装
     </h1>
   
 
@@ -303,7 +307,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xml解析/">xml解析</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nvidia/">nvidia</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -313,12 +317,42 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要="">摘要：这是一篇介绍如何使用python里面的dom去解析xml<a id="more"></a></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要="">摘要：这是一篇介绍如何在linux下安装Nvidia驱动的文章<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">import xml.dom.minidom as xmldom</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">Created by gaoyw on 2018/11/20</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line">XML文件读取</span><br><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;catalog&gt;</span><br><span class="line">    &lt;maxid&gt;4&lt;/maxid&gt;</span><br><span class="line">    &lt;login username=&quot;pytest&quot; passwd=&apos;123456&apos;&gt;dasdas</span><br><span class="line">        &lt;caption&gt;Python&lt;/caption&gt;</span><br><span class="line">        &lt;item id=&quot;4&quot;&gt;</span><br><span class="line">            &lt;caption&gt;测试&lt;/caption&gt;</span><br><span class="line">        &lt;/item&gt;</span><br><span class="line">    &lt;/login&gt;</span><br><span class="line">    &lt;item id=&quot;2&quot;&gt;</span><br><span class="line">        &lt;caption&gt;Zope&lt;/caption&gt;</span><br><span class="line">    &lt;/item&gt;</span><br><span class="line">&lt;/catalog&gt;</span><br><span class="line"></span><br><span class="line">&apos;&apos;&apos;</span><br><span class="line"></span><br><span class="line">xmlfilepath = os.path.abspath(&quot;test.xml&quot;) </span><br><span class="line"># 上述xml文件命名为test.xml放入执行文件的同一目录下</span><br><span class="line">print (&quot;xml文件路径：&quot;, xmlfilepath)</span><br><span class="line"></span><br><span class="line"># 得到文档对象</span><br><span class="line">domobj = xmldom.parse(xmlfilepath)</span><br><span class="line">print(&quot;xmldom.parse获得的对象是:&quot;, type(domobj))</span><br><span class="line"># 得到元素对象</span><br><span class="line">elementobj = domobj.documentElement</span><br><span class="line">print (&quot;domobj.documentElement获得的对象是:&quot;, type(elementobj))</span><br><span class="line"></span><br><span class="line">#获得子标签</span><br><span class="line">subElementObj = elementobj.getElementsByTagName(&quot;login&quot;)</span><br><span class="line">print (&quot;getElementsByTagName获得的对象是:&quot;, type(subElementObj))</span><br><span class="line"></span><br><span class="line">print (&quot;login标签的数目是：&quot;,len(subElementObj))</span><br><span class="line"># 获得标签属性值</span><br><span class="line">print (&quot;login标签中第一个标签的username的属性值是：&quot;+subElementObj[0].getAttribute(&quot;username&quot;))</span><br><span class="line">print (&quot;login标签中第一个标签的passwd的属性值是：&quot;+subElementObj[0].getAttribute(&quot;passwd&quot;))</span><br><span class="line"></span><br><span class="line">#区分相同标签名的标签</span><br><span class="line">subElementObj1 = elementobj.getElementsByTagName(&quot;caption&quot;)</span><br><span class="line">print(&quot;caption标签共有%s个&quot; % len(subElementObj1))</span><br><span class="line">for i in range(len(subElementObj1)):</span><br><span class="line">    print (&quot;subElementObj1[i]:&quot;, type(subElementObj1[i]))</span><br><span class="line">    print (subElementObj1[i].firstChild.data)  #显示标签对之间的数据</span><br></pre></td></tr></table></figure>
-<p><strong>上述的输出结果是：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">xml文件路径： E:\machinelearning\自然语言处理\项目\word2vec\xml解析\test.xml</span><br><span class="line">xmldom.parse获得的对象是: &lt;class &apos;xml.dom.minidom.Document&apos;&gt;</span><br><span class="line">domobj.documentElement获得的对象是: &lt;class &apos;xml.dom.minidom.Element&apos;&gt;</span><br><span class="line">getElementsByTagName获得的对象是: &lt;class &apos;xml.dom.minicompat.NodeList&apos;&gt;</span><br><span class="line">login标签的数目是： 1</span><br><span class="line">login标签中第一个标签的username的属性值是：pytest</span><br><span class="line">login标签中第一个标签的passwd的属性值是：123456</span><br><span class="line">caption标签共有3个</span><br><span class="line">subElementObj1[i]: &lt;class &apos;xml.dom.minidom.Element&apos;&gt;</span><br><span class="line">Python</span><br><span class="line">subElementObj1[i]: &lt;class &apos;xml.dom.minidom.Element&apos;&gt;</span><br><span class="line">测试</span><br><span class="line">subElementObj1[i]: &lt;class &apos;xml.dom.minidom.Element&apos;&gt;</span><br><span class="line">Zope</span><br></pre></td></tr></table></figure>
+<h1 id="查看版本驱动"><a href="#查看版本驱动" class="headerlink" title="查看版本驱动"></a><strong>查看版本驱动</strong></h1><p>点击查看驱动：<a href="http://www.nvidia.com/Download/index.aspx?lang=en-us" target="_blank" rel="noopener"><strong>NVIDIA驱动</strong></a> </p>
+<p><img src="/2018/11/21/linux下Nvidia驱动安装/驱动选择1.png" alt="驱动选择1"></p>
+<p><img src="/2018/11/21/linux下Nvidia驱动安装/驱动选择2.png" alt="驱动选择2"></p>
+<p>一般会下载到downloads文件夹下</p>
+<p><strong>下载完成之后：</strong></p>
+<p><strong>卸载原先的所有驱动：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove --purge nvidia* </span><br><span class="line"></span><br><span class="line">sudo nvidia-uninstall</span><br></pre></td></tr></table></figure>
+<p>关闭nouveau</p>
+<p>这个服务是开源的驱动，会和nvidia的驱动冲突，需要提前关闭</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gedit /etc/modprobe.d/blacklist.conf</span><br></pre></td></tr></table></figure>
+<p>在最后一行添加： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">blacklist nouveau</span><br></pre></td></tr></table></figure>
+<p>保存退出，之后，执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo update-initramfs -u</span><br></pre></td></tr></table></figure>
+<p>电脑重启之后执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep nouveau  #没有输出，即说明安装成功</span><br></pre></td></tr></table></figure>
+<p>然后关闭图形界面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo service lightdm stop</span><br><span class="line"></span><br><span class="line">sudo ./NVIDIA-Linux-x86_64-410.78.run -no-x-check -no-nouveau-check -no-opengl-files</span><br></pre></td></tr></table></figure>
+<p>这里的-no-opengl-files参数一定要带上，不然进入之后会反复登录，黑屏或者屏幕显示异常，如果出现上述情况，删掉驱动重装。</p>
+<h1 id="安装过程中的密钥选项"><a href="#安装过程中的密钥选项" class="headerlink" title="安装过程中的密钥选项"></a>安装过程中的密钥选项</h1><p>关于密钥的那个需要着重提示一下</p>
+<p>安装提示 “sign  the kernel module”  </p>
+<p>安装过程中提示是否sign the kernel module（为内核模块签名），这里要选择是。接下来会继续问使用已有的密钥给模块签名还是重新生成。</p>
+<p>这里选在重新生成密钥。继续下去之后，密钥会在/usr/share/nvidia/下生成一个nvidia*.der（公钥）文件和nvidia*.key（私钥）文件，当提示是否删除已生成的密钥文件时，选择否，</p>
+<p>因为之后要用到这两个文件。继续安装程序到最后会提示无法启动模块。这是因为生成的密钥还没有添加到内核的信任库中</p>
+<p>待安装结束后，添加密钥到内核的信任列表中 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mokutil --import /usr/share/nvidia/nvida*.der</span><br></pre></td></tr></table></figure>
+<p>接下来提示输入密码，再次输入密码，这里的密码下面要用</p>
+<p>然后  sudo  reboot</p>
+<p>重启进入boot loader之后，由于进行了添加密钥操作，会触发shim，这时不能直接进入 boot,选择第二个 “ reroll the mok ” 会要求输入上一步输入的密码来导入密钥。按步骤操作， 如果不小心进入boot,<br>再次执行 sudo mokutil …</p>
+<p>安装完成后，可以用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia-smi</span><br></pre></td></tr></table></figure>
+<p>查看驱动安装情况</p>
+<p><img src="/2018/11/21/linux下Nvidia驱动安装/驱动安装后3.png" alt="驱动安装后3"></p>
 </the>
       
     </div>
@@ -327,13 +361,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/11/20/python的xml解析/">python的xml解析</a></p>
+        <p><span>本文标题:</span><a href="/2018/11/21/linux下Nvidia驱动安装/">linux下Nvidia驱动安装</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">twilight</a></p>
-        <p><span>发布时间:</span>2018-11-20, 21:30:32</p>
-        <p><span>最后更新:</span>2018-11-21, 10:37:45</p>
+        <p><span>发布时间:</span>2018-11-21, 16:04:37</p>
+        <p><span>最后更新:</span>2018-11-22, 00:28:00</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/11/20/python的xml解析/" title="python的xml解析">https://612yese.github.io/2018/11/20/python的xml解析/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://612yese.github.io/2018/11/20/python的xml解析/　　作者: twilight" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/21/linux下Nvidia驱动安装/" title="linux下Nvidia驱动安装">https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/　　作者: twilight" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -345,16 +379,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/11/21/python的os-path用法/">
-                    python的os.path用法
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/11/20/VPS与ssr搭建/">
-                    VPS与ssr搭建
+                <a href="/2018/11/21/linux与windows双系统安装/">
+                    linux与windows双系统安装
                 </a>
             </div>
         
@@ -366,7 +394,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#查看版本驱动"><span class="toc-number">1.</span> <span class="toc-text">查看版本驱动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装过程中的密钥选项"><span class="toc-number">2.</span> <span class="toc-text">安装过程中的密钥选项</span></a></li></ol>
         
     </div>
     <style>
@@ -402,7 +430,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"python的xml解析　| twilight的窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"linux下Nvidia驱动安装　| twilight的窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -421,8 +449,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'https://612yese.github.io/2018/11/20/python的xml解析/';
-            this.page.identifier = '2018/11/20/python的xml解析/';
+            this.page.url = 'https://612yese.github.io/2018/11/21/linux下Nvidia驱动安装/';
+            this.page.identifier = '2018/11/21/linux下Nvidia驱动安装/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -444,15 +472,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/11/21/python的os-path用法/" title="上一篇: python的os.path用法">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/11/20/VPS与ssr搭建/" title="下一篇: VPS与ssr搭建">
+            <a href="/2018/11/21/linux与windows双系统安装/" title="下一篇: linux与windows双系统安装">
                 <i class="fa fa-angle-right"></i>
             </a>
         
