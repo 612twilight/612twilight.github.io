@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="摘要：这是一篇生日快乐吉他谱">
-<meta name="keywords" content="生日快乐">
+<meta name="description" content="摘要：这是一篇介绍如何python里面的os模块的路径获取方法的文章">
+<meta name="keywords" content="python本身">
 <meta property="og:type" content="article">
-<meta property="og:title" content="吉他谱_祝你生日快乐">
-<meta property="og:url" content="https://612yese.github.io/2018/11/10/吉他谱-祝你生日快乐/index.html">
+<meta property="og:title" content="python的os.path用法">
+<meta property="og:url" content="https://612yese.github.io/2018/11/21/python的os-path用法/index.html">
 <meta property="og:site_name" content="twilight的窝">
-<meta property="og:description" content="摘要：这是一篇生日快乐吉他谱">
+<meta property="og:description" content="摘要：这是一篇介绍如何python里面的os模块的路径获取方法的文章">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-10T12:48:44.837Z">
+<meta property="og:updated_time" content="2018-11-21T02:37:35.989Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="吉他谱_祝你生日快乐">
-<meta name="twitter:description" content="摘要：这是一篇生日快乐吉他谱">
+<meta name="twitter:title" content="python的os.path用法">
+<meta name="twitter:description" content="摘要：这是一篇介绍如何python里面的os模块的路径获取方法的文章">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>吉他谱_祝你生日快乐 | twilight的窝</title>
+<title>python的os.path用法 | twilight的窝</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -269,11 +269,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-吉他谱-祝你生日快乐" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-python的os-path用法" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/11/10/吉他谱-祝你生日快乐/" class="article-date">
-      <time datetime="2018-11-10T10:21:21.000Z" itemprop="datePublished">2018-11-10</time>
+      <a href="/2018/11/21/python的os-path用法/" class="article-date">
+      <time datetime="2018-11-21T02:01:51.000Z" itemprop="datePublished">2018-11-21</time>
 </a>
 
 
@@ -288,7 +288,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      吉他谱_祝你生日快乐
+      python的os.path用法
     </h1>
   
 
@@ -297,13 +297,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/吉他谱/">吉他谱</a>
+    <a class="article-category-link" href="/categories/tools/">tools</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生日快乐/">生日快乐</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python本身/">python本身</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -313,22 +313,48 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要="">摘要：这是一篇生日快乐吉他谱<a id="more"></a></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要="">摘要：这是一篇介绍如何python里面的os模块的路径获取方法的文章<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<p>弦从下往上数，0品为空弦</p>
-<p>弦    3    3    3    3    2    2</p>
-<p>品    0    0    2    0    1    0</p>
-<p>​    祝    你    生    日    快    乐</p>
-<p>弦    3    3    3    3    2    2</p>
-<p>品    0    0    2    0    1    0</p>
-<p>​    祝    你    生    日    快    乐</p>
-<p>弦    3    3    1    1    2    2    3</p>
-<p>品    0    0    3    0    1    0    2</p>
-<p>​    祝    你    生    日    快    乐    ~</p>
-<p>弦    1    1    1    2    2    2</p>
-<p>品    1    1    0    1    3    1</p>
-<p>​    祝    你    生    日    快    乐</p>
+<h1 id="file"><a href="#file" class="headerlink" title="__file__"></a>__file__</h1><p>__file__本身是一个str，会给出当前项目文件的绝对路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(os.path.abspath(__file__))</span><br><span class="line">print(__file__)</span><br><span class="line">print(type(__file__))</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">E:\machinelearning\自然语言处理\项目\word2vec\法院实际文书处理\解析法院xml.py</span><br><span class="line"></span><br><span class="line">E:/machinelearning/自然语言处理/项目/word2vec/法院实际文书处理/解析法院xml.py</span><br><span class="line"></span><br><span class="line">&lt;class &apos;str&apos;&gt;</span><br></pre></td></tr></table></figure>
+<p>os.path.abspath()会给出你的系统默认的文件路径方式</p>
+<p>__file__给出的是python内部默认的文件路径方式</p>
+<p>上述两个说法是我猜的</p>
+<h1 id="os-path-abspath"><a href="#os-path-abspath" class="headerlink" title="os.path.abspath()"></a>os.path.abspath()</h1><p><strong>os.path.abspath(“test.xml”)该函数会获得当前文件夹下test.xml文件的规范化绝对路径</strong></p>
+<p>以下是一些例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">os.path.abspath(&apos;test.csv&apos;) </span><br><span class="line"></span><br><span class="line"> &apos;C:\\Python25\\test.csv&apos;    </span><br><span class="line"></span><br><span class="line">os.path.abspath(&apos;c:\\test.csv&apos;) </span><br><span class="line"></span><br><span class="line"> &apos;c:\\test.csv&apos;    </span><br><span class="line"></span><br><span class="line">os.path.abspath(&apos;../csv\\test.csv&apos;) </span><br><span class="line"></span><br><span class="line"> &apos;C:\\csv\\test.csv&apos;</span><br></pre></td></tr></table></figure>
+<p>特殊：<code>os.path.abspath(&quot;.&quot;)</code>会获取当前文件夹的路径</p>
+<p><code>os.path.abspath(&quot;__file__&quot;)</code>会获取项目文件的绝对路径</p>
+<h1 id="os-path-join"><a href="#os-path-join" class="headerlink" title="os.path.join()"></a>os.path.join()</h1><p>os.path.join()函数中可以传入多个路径：</p>
+<ul>
+<li>会从第一个以”/”开头的参数开始拼接，之前的参数全部丢弃。</li>
+<li>以上一种情况为先。在上一种情况确保情况下，若出现”./”开头的参数，会从”./”开头的参数的上一个参数开始拼接。</li>
+</ul>
+<p>以下是一些案例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line"></span><br><span class="line">print(&quot;1:&quot;,os.path.join(&apos;aaaa&apos;,&apos;/bbbb&apos;,&apos;ccccc.txt&apos;))</span><br><span class="line"></span><br><span class="line">print(&quot;2:&quot;,os.path.join(&apos;/aaaa&apos;,&apos;/bbbb&apos;,&apos;/ccccc.txt&apos;))</span><br><span class="line"></span><br><span class="line">print(&quot;3:&quot;,os.path.join(&apos;aaaa&apos;,&apos;./bbb&apos;,&apos;ccccc.txt&apos;))</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1: /bbbb\ccccc.txt</span><br><span class="line">2: /ccccc.txt</span><br><span class="line">3: aaaa\./bbb\ccccc.txt</span><br></pre></td></tr></table></figure>
+<p><strong>这里就是需要找到一个路径，所以前面的路径要放弃，之后拼接的被认为是文件名。</strong></p>
+<h1 id="os-path-dirname"><a href="#os-path-dirname" class="headerlink" title="os.path.dirname()"></a>os.path.dirname()</h1><p>os.path.dirname(filepath)会给出文件的当前文件夹的路径</p>
+<p><strong>注意：传入的是文件路径</strong></p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(os.path.dirname(__file__))</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E:/machinelearning/自然语言处理/项目/word2vec/法院实际文书处理</span><br></pre></td></tr></table></figure>
+<h1 id="os-listdir"><a href="#os-listdir" class="headerlink" title="os.listdir()"></a>os.listdir()</h1><p>os.listdir(dirpath)会给出dirpath文件夹下的所有文件文件名，<strong>但不是路径名</strong></p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">filedir = os.path.join(os.path.abspath(&quot;.&quot;), &quot;法院文书&quot;)</span><br><span class="line"></span><br><span class="line">lists = os.listdir(filedir)</span><br><span class="line"></span><br><span class="line">for file in lists:</span><br><span class="line">    print(&quot;====&quot;, file)</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">==== ﹙2014﹚腊民一初字第139号.xml</span><br><span class="line">==== （2011）会民一初字第522号.xml</span><br><span class="line">==== （2011）吉民初字第355号.xml</span><br><span class="line">==== （2011）江法民初字第0622606057号.xml</span><br><span class="line">==== （2011）江法民初字第06226号.xml</span><br><span class="line">==== （2011）湖吴民初字第1078号.xml</span><br><span class="line">==== （2011）红民初字第690号.xml</span><br><span class="line">==== （2011）解民初字第1575号.xml</span><br><span class="line">==== （2011）辉民初字第710-1号.xml</span><br><span class="line">==== （2011）金东民初字第792号.xml</span><br><span class="line">==== （2011）金民二初字第5486号.xml</span><br><span class="line">==== （2011）金民初字第01366号.xml</span><br></pre></td></tr></table></figure>
+<p>os.path.split()</p>
+<p>os.path.split(filepath)会将传入的文件路径名分成两部分，文件当前文件夹的路径名以及文件名，也就是dirname和basename</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">temppath = os.path.abspath(__file__)</span><br><span class="line">print(temppath)</span><br><span class="line">twoele = os.path.split(temppath)</span><br><span class="line">print(twoele[0])</span><br><span class="line">print(twoele[1])</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">E:\machinelearning\自然语言处理\项目\word2vec\法院实际文书处理\解析法院xml.py</span><br><span class="line">E:\machinelearning\自然语言处理\项目\word2vec\法院实际文书处理</span><br><span class="line">解析法院xml.py</span><br></pre></td></tr></table></figure>
 </the>
       
     </div>
@@ -337,13 +363,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/11/10/吉他谱-祝你生日快乐/">吉他谱_祝你生日快乐</a></p>
+        <p><span>本文标题:</span><a href="/2018/11/21/python的os-path用法/">python的os.path用法</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">twilight</a></p>
-        <p><span>发布时间:</span>2018-11-10, 18:21:21</p>
-        <p><span>最后更新:</span>2018-11-10, 20:48:44</p>
+        <p><span>发布时间:</span>2018-11-21, 10:01:51</p>
+        <p><span>最后更新:</span>2018-11-21, 10:37:35</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/11/10/吉他谱-祝你生日快乐/" title="吉他谱_祝你生日快乐">https://612yese.github.io/2018/11/10/吉他谱-祝你生日快乐/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://612yese.github.io/2018/11/10/吉他谱-祝你生日快乐/　　作者: twilight" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/21/python的os-path用法/" title="python的os.path用法">https://612yese.github.io/2018/11/21/python的os-path用法/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://612yese.github.io/2018/11/21/python的os-path用法/　　作者: twilight" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -355,16 +381,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/11/20/VPS与ssr搭建/">
-                    VPS与ssr搭建
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/11/10/python里的Data-streaming总结/">
-                    python里的Data streaming总结
+                <a href="/2018/11/20/python的xml解析/">
+                    python的xml解析
                 </a>
             </div>
         
@@ -376,7 +396,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#file"><span class="toc-number">1.</span> <span class="toc-text">__file__</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#os-path-abspath"><span class="toc-number">2.</span> <span class="toc-text">os.path.abspath()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#os-path-join"><span class="toc-number">3.</span> <span class="toc-text">os.path.join()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#os-path-dirname"><span class="toc-number">4.</span> <span class="toc-text">os.path.dirname()</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#os-listdir"><span class="toc-number">5.</span> <span class="toc-text">os.listdir()</span></a></li></ol>
         
     </div>
     <style>
@@ -412,7 +432,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"吉他谱_祝你生日快乐　| twilight的窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"python的os.path用法　| twilight的窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -431,8 +451,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'https://612yese.github.io/2018/11/10/吉他谱-祝你生日快乐/';
-            this.page.identifier = '2018/11/10/吉他谱-祝你生日快乐/';
+            this.page.url = 'https://612yese.github.io/2018/11/21/python的os-path用法/';
+            this.page.identifier = '2018/11/21/python的os-path用法/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -454,15 +474,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/11/20/VPS与ssr搭建/" title="上一篇: VPS与ssr搭建">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/11/10/python里的Data-streaming总结/" title="下一篇: python里的Data streaming总结">
+            <a href="/2018/11/20/python的xml解析/" title="下一篇: python的xml解析">
                 <i class="fa fa-angle-right"></i>
             </a>
         

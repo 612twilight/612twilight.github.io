@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://612yese.github.io/"/>
-  <updated>2018-11-20T11:31:54.155Z</updated>
+  <updated>2018-11-21T02:37:35.989Z</updated>
   <id>https://612yese.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python的os.path用法</title>
+    <link href="https://612yese.github.io/2018/11/21/python%E7%9A%84os-path%E7%94%A8%E6%B3%95/"/>
+    <id>https://612yese.github.io/2018/11/21/python的os-path用法/</id>
+    <published>2018-11-21T02:01:51.000Z</published>
+    <updated>2018-11-21T02:37:35.989Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;摘要：这是一篇介绍如何python里面的os模块的路径获取方法的文章&lt;/excerpt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://612yese.github.io/categories/tools/"/>
+    
+    
+      <category term="python本身" scheme="https://612yese.github.io/tags/python%E6%9C%AC%E8%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python的xml解析</title>
+    <link href="https://612yese.github.io/2018/11/20/python%E7%9A%84xml%E8%A7%A3%E6%9E%90/"/>
+    <id>https://612yese.github.io/2018/11/20/python的xml解析/</id>
+    <published>2018-11-20T13:30:32.000Z</published>
+    <updated>2018-11-21T02:37:45.359Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;摘要：这是一篇介绍如何使用python里面的dom去解析xml&lt;/excerpt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="tools" scheme="https://612yese.github.io/categories/tools/"/>
+    
+    
+      <category term="xml解析" scheme="https://612yese.github.io/tags/xml%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
   
   <entry>
     <title>VPS与ssr搭建</title>
