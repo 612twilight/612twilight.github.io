@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://612yese.github.io/"/>
-  <updated>2018-11-21T16:31:10.800Z</updated>
+  <updated>2018-11-22T12:13:54.243Z</updated>
   <id>https://612yese.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux环境配置之sublime插件安装</title>
+    <link href="https://612yese.github.io/2018/11/22/linux%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E4%B9%8Bsublime%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    <id>https://612yese.github.io/2018/11/22/linux环境配置之sublime插件安装/</id>
+    <published>2018-11-22T09:34:59.000Z</published>
+    <updated>2018-11-22T12:13:54.243Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;excerpt in=&quot;&quot; index=&quot;&quot; |=&quot;&quot; 首页摘要=&quot;&quot;&gt;摘要：这是一篇介绍在ubuntu系统里面安装sublime插件的文章&lt;/excerpt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="itools" scheme="https://612yese.github.io/categories/itools/"/>
+    
+    
+      <category term="linux" scheme="https://612yese.github.io/tags/linux/"/>
+    
+      <category term="sublime" scheme="https://612yese.github.io/tags/sublime/"/>
+    
+  </entry>
   
   <entry>
     <title>linux下Nvidia驱动安装</title>

@@ -15,18 +15,21 @@
 
 
 
-<meta name="description" content="摘要：这是一篇介绍如何使用genism去计算一个词在文档语料库的tfidf值的博客">
-<meta name="keywords" content="gensim,tfidf">
+<meta name="description" content="摘要：这是一篇介绍在ubuntu系统里面安装sublime插件的文章">
+<meta name="keywords" content="linux,sublime">
 <meta property="og:type" content="article">
-<meta property="og:title" content="genism之tfidf">
-<meta property="og:url" content="https://612yese.github.io/2018/11/09/tfidf/index.html">
+<meta property="og:title" content="linux环境配置之sublime插件安装">
+<meta property="og:url" content="https://612yese.github.io/2018/11/22/linux环境配置之sublime插件安装/index.html">
 <meta property="og:site_name" content="twilight的窝">
-<meta property="og:description" content="摘要：这是一篇介绍如何使用genism去计算一个词在文档语料库的tfidf值的博客">
+<meta property="og:description" content="摘要：这是一篇介绍在ubuntu系统里面安装sublime插件的文章">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-09T12:15:22.499Z">
+<meta property="og:image" content="https://612yese.github.io/2018/11/22/linux环境配置之sublime插件安装/sublime控制台.png">
+<meta property="og:image" content="https://612yese.github.io/2018/11/22/linux环境配置之sublime插件安装/pxinsatll.png">
+<meta property="og:updated_time" content="2018-11-22T12:13:54.243Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="genism之tfidf">
-<meta name="twitter:description" content="摘要：这是一篇介绍如何使用genism去计算一个词在文档语料库的tfidf值的博客">
+<meta name="twitter:title" content="linux环境配置之sublime插件安装">
+<meta name="twitter:description" content="摘要：这是一篇介绍在ubuntu系统里面安装sublime插件的文章">
+<meta name="twitter:image" content="https://612yese.github.io/2018/11/22/linux环境配置之sublime插件安装/sublime控制台.png">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -58,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>genism之tfidf | twilight的窝</title>
+<title>linux环境配置之sublime插件安装 | twilight的窝</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -269,11 +272,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-tfidf" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-linux环境配置之sublime插件安装" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/11/09/tfidf/" class="article-date">
-      <time datetime="2018-11-09T08:10:27.000Z" itemprop="datePublished">2018-11-09</time>
+      <a href="/2018/11/22/linux环境配置之sublime插件安装/" class="article-date">
+      <time datetime="2018-11-22T09:34:59.000Z" itemprop="datePublished">2018-11-22</time>
 </a>
 
 
@@ -288,7 +291,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      genism之tfidf
+      linux环境配置之sublime插件安装
     </h1>
   
 
@@ -297,13 +300,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/NLP/">NLP</a>
+    <a class="article-category-link" href="/categories/itools/">itools</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gensim/">gensim</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tfidf/">tfidf</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime/">sublime</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -313,22 +316,46 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要="">摘要：这是一篇介绍如何使用genism去计算一个词在文档语料库的tfidf值的博客<a id="more"></a></excerpt></p>
+        <p><excerpt in="" index="" |="" 首页摘要="">摘要：这是一篇介绍在ubuntu系统里面安装sublime插件的文章<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
-<h1 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from gensim import models, similarities</span><br></pre></td></tr></table></figure>
-<h1 id="定义语料库"><a href="#定义语料库" class="headerlink" title="定义语料库"></a>定义语料库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">corpus = [[(0, 1.0), (1, 1.0), (2, 1.0)],</span><br><span class="line">            [(2, 1.0), (3, 1.0), (4, 1.0), (5, 1.0), (6, 1.0), (8, 1.0)],</span><br><span class="line">            [(1, 1.0), (3, 1.0), (4, 1.0), (7, 1.0)],</span><br><span class="line">            [(0, 1.0), (4, 2.0), (7, 1.0)],</span><br><span class="line">            [(3, 1.0), (5, 1.0), (6, 1.0)],</span><br><span class="line">            [(9, 1.0)],</span><br><span class="line">            [(9, 1.0), (10, 1.0)],</span><br><span class="line">            [(9, 1.0), (10, 1.0), (11, 1.0)],</span><br><span class="line">            [(8, 1.0), (10, 1.0), (11, 1.0)]]</span><br></pre></td></tr></table></figure>
-<p>corpus就是我们的文档库，其中article0=corpus[0]=[(0, 1.0), (1, 1.0), (2, 1.0)]表示的是一篇文档的组成,article0[0]=（0,1.0）表示的是单词编号为0的词在该文章里有出现过1.0次，其余组成也是这样：单词编号为1的词在该文章里出现1.0次，单词编号为2的词在该文章里出现了1.0次。</p>
-<h1 id="建立tfidf的模型"><a href="#建立tfidf的模型" class="headerlink" title="建立tfidf的模型"></a>建立tfidf的模型</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tfidf = models.TfidfModel(corpus)</span><br></pre></td></tr></table></figure>
-<h1 id="建立需要提取的文档"><a href="#建立需要提取的文档" class="headerlink" title="建立需要提取的文档"></a>建立需要提取的文档</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new_article = [(0, 1), (4, 1)]</span><br></pre></td></tr></table></figure>
-<p>显然文档也是由向量组成的。</p>
-<h1 id="计算新文档的tfidf的值"><a href="#计算新文档的tfidf的值" class="headerlink" title="计算新文档的tfidf的值"></a>计算新文档的tfidf的值</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result=tfidf[new_article]</span><br></pre></td></tr></table></figure>
-<p>result就是这篇文章中所有词的tfidf值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(result)</span><br></pre></td></tr></table></figure>
-<p>打印结果是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[(0, 0.8075244024440723), (4, 0.5898341626740045)]</span><br></pre></td></tr></table></figure>
-<p>结果表示的是编号为0的词的tfidf的值为0.8075244024440723，而编号为4的词的tfidf的值为0.5898341626740045</p>
-<h1 id="综合上述代码"><a href="#综合上述代码" class="headerlink" title="综合上述代码"></a>综合上述代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">from gensim import models, similarities</span><br><span class="line">corpus = [[(0, 1.0), (1, 1.0), (2, 1.0)],</span><br><span class="line">            [(2, 1.0), (3, 1.0), (4, 1.0), (5, 1.0), (6, 1.0), (8, 1.0)],</span><br><span class="line">            [(1, 1.0), (3, 1.0), (4, 1.0), (7, 1.0)],</span><br><span class="line">            [(0, 1.0), (4, 2.0), (7, 1.0)],</span><br><span class="line">            [(3, 1.0), (5, 1.0), (6, 1.0)],</span><br><span class="line">            [(9, 1.0)],</span><br><span class="line">            [(9, 1.0), (10, 1.0)],</span><br><span class="line">            [(9, 1.0), (10, 1.0), (11, 1.0)],</span><br><span class="line">            [(8, 1.0), (10, 1.0), (11, 1.0)]]</span><br><span class="line">print(np.shape(corpus))</span><br><span class="line">tfidf = models.TfidfModel(corpus)</span><br><span class="line">new_article = [(0, 1), (4, 1)]</span><br><span class="line">result = tfidf[new_article]</span><br><span class="line">print(result) </span><br><span class="line"># [(0, 0.8075244024440723), (4, 0.5898341626740045)]</span><br></pre></td></tr></table></figure></the>
+<h1 id="安装sublime-text3"><a href="#安装sublime-text3" class="headerlink" title="安装sublime text3"></a><strong>安装sublime text3</strong></h1><p>目前最简单的方法是通过ppa安装，打开终端，输入以下命令：</p>
+<p>sudo add-apt-repository ppa:webupd8team/sublime-text-3</p>
+<p>sudo apt-get update</p>
+<p>sudo apt-get install sublime-text-installer</p>
+<h1 id="卸载-sublime"><a href="#卸载-sublime" class="headerlink" title="卸载 sublime"></a><strong>卸载 sublime</strong></h1><p>sudo apt-get remove sublime-text-installer</p>
+<h1 id="启动sublime"><a href="#启动sublime" class="headerlink" title="启动sublime"></a><strong>启动sublime</strong></h1><p>命令行输入：subl(不是1是L) </p>
+<p>可以启动sublime</p>
+<h1 id="激活sublime"><a href="#激活sublime" class="headerlink" title="激活sublime"></a><strong>激活sublime</strong></h1><p>装完了以后可以激活它，在Help里输入license key</p>
+<p>—– BEGIN LICENSE —–</p>
+<p>Michael Barnes</p>
+<p>Single User License</p>
+<p>EA7E-821385</p>
+<p>8A353C41 872A0D5C DF9B2950 AFF6F667</p>
+<p>C458EA6D 8EA3C286 98D1D650 131A97AB</p>
+<p>AA919AEC EF20E143 B361B1E7 4C8B7F04</p>
+<p>B085E65E 2F5F5360 8489D422 FB8FC1AA</p>
+<p>93F6323C FD7F7544 3F39C318 D95E6480</p>
+<p>FCCC7561 8A4A1741 68FA4223 ADCEDE07</p>
+<p>200C25BE DBBC4855 C4CFB774 C5EC138C</p>
+<p>0FEC1CEF D9DCECEC D3A5DAD1 01316C36</p>
+<p>—— END LICENSE ——</p>
+<p>Key来自 <a href="https://fatesinger.com/77763" target="_blank" rel="noopener">https://fatesinger.com/77763</a></p>
+<h1 id="安装package-control"><a href="#安装package-control" class="headerlink" title="安装package control"></a><strong>安装package control</strong></h1><p>为了使用众多的 <a href="https://sublime.wbond.net/" target="_blank" rel="noopener">插件</a> 来扩展 Sublime 的功能，你需要安装一个叫做 <strong>Package Control</strong> 的插件管理器——这个东西你必须要手动安装。但是一旦你安装好了以后，你就可以使用 Package Control 来安装，移除或者升级所有的 ST3 插件了 </p>
+<p><img src="/2018/11/22/linux环境配置之sublime插件安装/sublime控制台.png" alt="sublime控制台"></p>
+<p>打开sublime的控制台，输入安装的命令</p>
+<p><a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">https://packagecontrol.io/installation</a></p>
+<p>安装命令可以从上述链接里获得。</p>
+<h1 id="使用package-control安装插件"><a href="#使用package-control安装插件" class="headerlink" title="使用package control安装插件"></a><strong>使用package control安装插件</strong></h1><p>在preference&gt;&gt;package control里打开插件窗口，输入或找到 install package这一个选项，选中然后就可以选择需要的插件安装。</p>
+<p><img src="/2018/11/22/linux环境配置之sublime插件安装/pxinsatll.png" alt="pxinsatll"></p>
+<h1 id="安装anaconda插件"><a href="#安装anaconda插件" class="headerlink" title="安装anaconda插件"></a><strong>安装anaconda插件</strong></h1><p>选中install package</p>
+<p>输入anaconda，选择对应的安装</p>
+<p><strong>注意：</strong>如果出现安装失败，Package Control:Unableto download Emmet.Please view the console for more details </p>
+<p>我的问题解决是：</p>
+<p>将downloader_precedence 参数改成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;windows&quot;: [&quot;wininet&quot;],</span><br><span class="line">    &quot;osx&quot;: [&quot;urllib&quot;],</span><br><span class="line">    &quot;linux&quot;: [&quot;curl&quot;, &quot;wget&quot;, &quot;urllib&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>也就是将”curl”, “wget”往前移，我也不知道为什么，反正解决了</p>
+</the>
       
     </div>
     
@@ -336,13 +363,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/11/09/tfidf/">genism之tfidf</a></p>
+        <p><span>本文标题:</span><a href="/2018/11/22/linux环境配置之sublime插件安装/">linux环境配置之sublime插件安装</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">twilight</a></p>
-        <p><span>发布时间:</span>2018-11-09, 16:10:27</p>
-        <p><span>最后更新:</span>2018-11-09, 20:15:22</p>
+        <p><span>发布时间:</span>2018-11-22, 17:34:59</p>
+        <p><span>最后更新:</span>2018-11-22, 20:13:54</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/11/09/tfidf/" title="genism之tfidf">https://612yese.github.io/2018/11/09/tfidf/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://612yese.github.io/2018/11/09/tfidf/　　作者: twilight" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/22/linux环境配置之sublime插件安装/" title="linux环境配置之sublime插件安装">https://612yese.github.io/2018/11/22/linux环境配置之sublime插件安装/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://612yese.github.io/2018/11/22/linux环境配置之sublime插件安装/　　作者: twilight" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -354,16 +381,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/11/09/分词/">
-                    jieba之分词
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/11/09/word2vec/">
-                    word2vec工具探索
+                <a href="/2018/11/21/linux下Nvidia驱动安装/">
+                    linux下Nvidia驱动安装
                 </a>
             </div>
         
@@ -375,7 +396,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#导入"><span class="toc-number">1.</span> <span class="toc-text">导入</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#定义语料库"><span class="toc-number">2.</span> <span class="toc-text">定义语料库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立tfidf的模型"><span class="toc-number">3.</span> <span class="toc-text">建立tfidf的模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立需要提取的文档"><span class="toc-number">4.</span> <span class="toc-text">建立需要提取的文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#计算新文档的tfidf的值"><span class="toc-number">5.</span> <span class="toc-text">计算新文档的tfidf的值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#综合上述代码"><span class="toc-number">6.</span> <span class="toc-text">综合上述代码</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装sublime-text3"><span class="toc-number">1.</span> <span class="toc-text">安装sublime text3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#卸载-sublime"><span class="toc-number">2.</span> <span class="toc-text">卸载 sublime</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#启动sublime"><span class="toc-number">3.</span> <span class="toc-text">启动sublime</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#激活sublime"><span class="toc-number">4.</span> <span class="toc-text">激活sublime</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装package-control"><span class="toc-number">5.</span> <span class="toc-text">安装package control</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用package-control安装插件"><span class="toc-number">6.</span> <span class="toc-text">使用package control安装插件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装anaconda插件"><span class="toc-number">7.</span> <span class="toc-text">安装anaconda插件</span></a></li></ol>
         
     </div>
     <style>
@@ -411,7 +432,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"genism之tfidf　| twilight的窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"linux环境配置之sublime插件安装　| twilight的窝　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -430,8 +451,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'https://612yese.github.io/2018/11/09/tfidf/';
-            this.page.identifier = '2018/11/09/tfidf/';
+            this.page.url = 'https://612yese.github.io/2018/11/22/linux环境配置之sublime插件安装/';
+            this.page.identifier = '2018/11/22/linux环境配置之sublime插件安装/';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -453,15 +474,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/11/09/分词/" title="上一篇: jieba之分词">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/11/09/word2vec/" title="下一篇: word2vec工具探索">
+            <a href="/2018/11/21/linux下Nvidia驱动安装/" title="下一篇: linux下Nvidia驱动安装">
                 <i class="fa fa-angle-right"></i>
             </a>
         
