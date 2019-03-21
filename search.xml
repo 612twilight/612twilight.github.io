@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>python里__init__.py文件的作用</title>
+      <link href="/2019/03/21/python%E9%87%8C-init-py%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
+      <url>/2019/03/21/python%E9%87%8C-init-py%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要="">摘要：这是一篇介绍python模块下的__init__.py的作用<a id="more"></a></excerpt></p><the rest="" of="" contents="" |="" 余下全文=""><h1 id="init-py文件的意义"><a href="#init-py文件的意义" class="headerlink" title="__init__.py文件的意义"></a>__init__.py文件的意义</h1><p>在python模块的每一个包中，都有一个<strong>init</strong>.py文件（这个文件定义了包的属性和方法）然后是一些模块文件和子目录，假如子目录中也有 <strong>init</strong>.py 那么它就是这个包的子包了。当你将一个包作为模块导入（比如从 xml 导入 dom ）的时候，实际上导入了它的__init__.py 文件。</p><p>一个包是一个带有特殊文件__init__.py 的目录。_<em>init\</em>_.py 文件定义了包的属性和方法。其实它可以什么也不定义；可以只是一个空文件，但是必须存在。如果 __init__.py 不存在，这个目录就仅仅是一个目录，而不是一个包，它就不能被导入或者包含其它的模块和嵌套包。</p><h1 id="init-py里的内容"><a href="#init-py里的内容" class="headerlink" title="__init__.py里的内容"></a>__init__.py里的内容</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">from .ws_classfication import Classfication_ws</span><br><span class="line"></span><br><span class="line">__all__ = [&apos;Classfication_ws&apos;]</span><br></pre></td></tr></table></figure><p>第一行指的是从ws_classfication.py文件里面引入了Classfication_ws这个类</p><p>第二行__all__方法是指将这个如果我们以后导入模块的时候，会引入东西</p><p>如果该文件里面什么都没有的话，那么我们引入该模块就不会有任何额外的操作</p><p>注意：这里使用.ws_classfication</p><h1 id="使用模块引入"><a href="#使用模块引入" class="headerlink" title="使用模块引入"></a>使用模块引入</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import graduation_project as gdp</span><br><span class="line"></span><br><span class="line">classfication = gdp.Classfication_ws()</span><br></pre></td></tr></table></figure></the>]]></content>
+      
+      
+      <categories>
+          
+          <category> 未分类 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 未分类 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>vue-cil搭建</title>
       <link href="/2019/03/18/vue-cil%E6%90%AD%E5%BB%BA/"/>
       <url>/2019/03/18/vue-cil%E6%90%AD%E5%BB%BA/</url>
